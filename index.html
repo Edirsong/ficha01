@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha 01 - Tutoria - UNE</title>
+
+    <!----======== CSS ======== -->
+    <link rel="preload" href="normalize.css" as="style">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="preload" href="style.css" as="style">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <style>
+
+
+        body {
+                overflow-x: hidden;
+
+        }
+        .navbar {
+                margin-bottom: 20px;
+        }
+        
+        .linea-marcada {
+            border: 1px solid #007bff; /* Línea negra y gruesa */
+            margin-top: 10px; /* Espacio superior */
+            margin-bottom: 10px; /* Espacio inferior */
+            opacity: 0.3;
+        }
+
+        .footer-text {
+                font-size: 0.7rem; /* Reducir el tamaño de la fuente */
+        }
+
+        span {
+            font-size: 19px;
+            color:#007bff;
+            font-weight: bold;
+
+  
+        }
+        .uni p {
+            font-weight: bold;
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+        .informe p {
+            font-size: 17px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid py-4">
+        <div class="row">
+            <div class="py-4 col-sm-12 col-md-8 col-lg-6 mx-auto shadow border bg-white p-3 rounded">
+
+                <header class="text-center uni mb-4">
+                    <p>UNIVERSIDAD NACIONAL DE EDUCACIÓN</p>
+                    <P>Enrique Guzmán y Valle</P>
+                    <p><em>Alma Máter del Magisterio Nacional</em></p>
+                    <img src="https://www.une.edu.pe/test/images/logoune.gif" alt="Logo" style="max-width: 100px;"/>
+                    <p>FACULTAD DE CIENCIAS SOCIALES Y HUMANIDADES</p>
+                    <p>ESCUELA PROFESIONAL DE COMUNICACIÓN</p>
+                </header>
+
+                <!-- Título del formulario -->
+                <section class="container-fluid bg-primary">
+                    <div class="mx-auto text-center">
+                        <h4 class="text-white text-wrap py-2">
+                            Ficha 01 de registro del estudiante
+                        </h4>
+                    </div>
+                </section>
+
+    <hr class="linea-marcada">
+
+                <section class="text-left mb-4 informe">
+                    <p>Llenar la ficha de tutoria. Para consultas:</p>
+                    <ul class="pl-4">
+                    <li>
+                        <p>
+                        <i class="bi bi-envelope-fill text-primary"></i>
+                        <strong>Correo: ehuayre@une.edu.pe</strong>
+                        </p>
+                        
+                    </li>
+                    <li>
+                        <p>
+                        <i class="bi bi-telephone-fill text-primary"></i>
+                        <strong>Teléfono: 965345029</span></strong>
+                        </p>
+                    </li>
+                    </ul>   
+                </section>
+
+    <hr class="linea-marcada">
+                <section>
+                    <form id="myForm" onsubmit="handleFormSubmit()">
+                        <div id="form_alerts"></div>
+                        <span class="title">Docente Tutor</span>
+
+                        <div class="row py-2">
+                            <div class="col-md-6 mb-3">
+                                <label for="Completo" class="form-label">Nombre Completo</label>
+                                <input type="text" id="Completo" name="Completo" class="form-control" placeholder="" required>
+                            </div>
+                        </div>
+
+
+    <hr class="linea-marcada">
+
+                        <span class="title">Datos Generales</span>
+
+                        <div class="row py-2">
+
+                            <div class="col-md-4 mb-3">
+                                <label for="Nombres" class="form-label">Nombres</label>
+                                <input type="text" id="Nombres" name="Nombres" class="form-control" placeholder="" required>
+                            </div>
+
+                            <div class="col-md-4 mb-3">
+                                <label for="Paterno" class="form-label">Apellido Paterno</label>
+                                <input type="text" id="Paterno" name="Paterno" class="form-control" placeholder="" required>
+                            </div>
+
+                            <div class="col-md-4 mb-3">
+                                <label for="Materno" class="form-label">Apellido Materno</label>
+                                <input type="text" id="Materno" name="Materno" class="form-control" placeholder="" required>
+                            </div>
+
+                            
+                            <div class="col-md-4 mb-3">
+                                <label for="codigo" class="form-label">Código</label>
+                                <input type="text" id="codigo" name="codigo" class="form-control" placeholder="" required>
+                            </div>
+    
+                            <div class="col-md-4 mb-3">
+                                    <label for="Correo" class="form-label">Correo Institucional</label>
+                                    <input type="email" id="Correo" name="Correo" class="form-control" placeholder="" required>
+                            </div>
+
+                            <div class="col-md-4 mb-3">
+                                <label for="telefono" class="form-label">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="" required>
+                            </div>
+
+                            <div class="col-md-3 mb-3">
+                                <label for="semestre" class="form-label">Semestre Académico</label>
+                                <input type="text" id="semestre" name="semestre" class="form-control" placeholder="" required>
+                            </div>
+
+                            <div class="col-md-4 mb-3">
+                            <label for="especialidad" class="form-label">Especialidad</label>
+                            <input type="text" id="especialidad" name="especialidad" class="form-control" placeholder="" required>
+                            </div>
+
+                            <div class="col-md-5 mb-3">
+                                <div class="form-group">
+                                    <label for="Escuela" class="form-label">Escuela profesional</label>
+                                    <select type="option" id="Escuela" name="Escuela" class="form-control"  placeholder="" required>
+                                        <option></option>
+                                        <option>Escuela Profesional de Ciencias Sociales</option>
+                                        <option>Escuela Profesional de Humanidades y Lenguas Nativas</option>
+                                        <option>Escuela Profesional de Lenguas Extranjeras</option>
+                                        <option>Escuela Profesional de Educación Artística</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 mb-3">
+                            <label for="Padre" class="form-label">Nombre Completo del Padre</label>
+                            <input type="text" id="Padre" name="Padre" class="form-control" placeholder="" required>
+                            </div>
+
+                            <div class="col-md-4 mb-3">
+                                <label for="Madre" class="form-label">Nombre Completo de la Madre</label>
+                                <input type="text" id="Madre" name="Madre" class="form-control" placeholder="" required>
+                            </div>
+
+                            <div class="col-md-4 mb-3">
+                                <label for="viven" class="form-label">¿Viven contigo?</label>
+                                <select type="option" id="viven" name="viven" class="form-control" placeholder="" required>
+                                    <option></option>
+                                    <option>Si</option>
+                                    <option>No</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-7 mb-3">
+                                <label for="quienes" class="form-label">¿Con Quienes Vives?</label>
+                                <input type="text" id="quienes" name="quienes" class="form-control" placeholder="" required>
+                            </div>
+
+                            <div class="col-md-5 mb-3">
+                                <label for="direccion" class="form-label">Dirección</label>
+                                <input type="text" id="direccion" name="direccion" class="form-control" placeholder="" required>
+                            </div>
+                        </div>
+
+    
+    <hr class="linea-marcada">
+
+                        <span class="title">Ocupación Del Estudiante</span>
+                            
+                        <div class="row py-2">
+
+                            <div class="col-md-4 mb-3">
+                                <label for="ocupacion" class="form-label">Ocupación</label>
+                                <select type="option" id="ocupacion" name="ocupacion" class="form-control" placeholder="" required>
+                                    <option></option>
+                                    <option>Trabajo</option>
+                                    <option>Estudio</option>
+                                    <option>Ambos</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-4 mb-3">
+                                <div class="form-group">
+                                    <label for="trabajo" class="form-label">Lugar de Trabajo</label>
+                                    <input type="text" id="trabajo" name="trabajo" class="form-control" placeholder="" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 mb-3">
+                                <label for="financiamiento" class="form-label">¿Quién lo Financia?</label>
+                                <select type="option" id="financiamiento" name="financiamiento" class="form-control" placeholder="" required>
+                                    <option></option>
+                                    <option>Yo Mismo</option>
+                                    <option>Mis Padres</option>
+                                    <option>Un Tutor</option>
+                                    <option>Un Familiar</option>
+                                    <option>Otro</option>
+                                </select>
+                            </div>
+                        </div>
+
+    <hr class="linea-marcada">
+
+                        <span class="title">Área Vocacional</span>
+
+                        <div class="row py-2">
+                            <div class="col-md-7 mb-1">
+                                <!-- Atención -->
+                                <div class="form-group">
+                                    <label for="seguridad" class="form-label">¿Qué tan seguro estás respecto a la carrera que vas a estudiar?</label>
+                                    <select type="option" id="seguridad" name="seguridad" class="form-control" required>
+                                    <option></option>
+                                    <option>Muy Seguro</option>
+                                    <option>Medianamente Seguro</option>
+                                    <option>No Estoy Seguro</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-1">
+                                <!-- Fecha 1 -->
+                                <div class="form-group">
+                                    <label for="voluntariamente" class="form-label">¿Elegiste voluntariamente esta carrera? </label>
+                                    <select type="option" id="voluntariamente" name="voluntariamente" class="form-control" required>
+                                        <option></option>
+                                        <option>Si</option>
+                                        <option>No</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="carreraest" class="form-label">¿Qué otra carrera estudiarías? </label>
+                                <input type="text" id="carreraest" name="carreraest" class="form-control" placeholder="" required>
+                            </div>
+                            
+                        </div>
+
+    <hr class="linea-marcada">
+
+                        <span class="title">Área Académica</span>
+
+                        <div class="row py-2">
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group">
+                                    <label for="colegio" class="form-label">Colegio de Donde Egreso</label>
+                                    <input type="text" id="colegio" name="colegio" class="form-control" placeholder="" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 mb-3">
+                                <div class="form-group">
+                                    <label for="añoter" class="form-label">Año de Término</label>
+                                    <input type="text" id="añoter" name="añoter" class="form-control" placeholder="" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-8 mb-1">
+                                <div class="form-group">
+                                    <label for="otrosest" class="form-label">Antes de ingresar a la UNE, has realizado otros estudios</label>
+                                    <select type="option" id="otrosest" name="otrosest" class="form-control" required>
+                                        <option></option>
+                                        <option>Si</option>
+                                        <option>No</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-5 mb-1">
+                                <div class="form-group">
+                                    <label for="estudiosfue" class="form-label">Los Estudios fueron</label>
+                                    <select type="option" id="estudiosfue" name="estudiosfue" class="form-control" required>
+                                        <option></option>
+                                        <option>Universidad Completa</option>
+                                        <option>Universidad Incompleta</option>
+                                        <option>Instituto</option>
+                                        <option>Instituto Incompleto</option>
+                                        <option>Ninguno</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+    <hr class="linea-marcada">
+
+                        <span class="title">Área Personal</span>
+
+                        <div class="row py-2">
+                            <div class="col-md-12 mb-3">
+                                <div class="form-group">
+                                    <label for="tresaspect">Menciona tres aspectos que caracterizan tu personalidad</label>
+                                    <textarea class="form-control" placeholder="" id="tresaspect"></textarea>  
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-0">
+                                <div class="form-group">
+                                    <p>¿Qué dificultades enfrentas actualmente o qué crees que puede interferir con tus estudios? (Marca todas alternativas que puedan ser correctas)</p>
+                                </div>
+                            </div>  
+                        </div>
+                        
+                        <div class="mb-3 px-1">
+                            <div class="form-check" >
+                                <input class="form-check-input" type="checkbox" value="" id="uno" required>
+                                <label class="form-check-label" for="uno" name="uno">
+                                    Dudas con respecto a la elección de la carrera.
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="dos" required>
+                                <label class="form-check-label" for="dos" name="dos">
+                                    Presión de mis padres.
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="tres" required>
+                                <label class="form-check-label" for="tres" name="tres">
+                                    Falta de un método de estudio eficaz.
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="cuatro" required>
+                                <label class="form-check-label" for="cuatro" name="cuatro">
+                                    Mala organización de mi tiempo.
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="cinco" required>
+                                <label class="form-check-label" for="cinco" name="cinco">
+                                    Dificultad para leer y comprender textos.
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="seis" required>
+                                <label class="form-check-label" for="seis" name="seis">
+                                    Falta de interés o motivación para estudiar.
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="siete" required>
+                                <label class="form-check-label" for="siete" name="siete">
+                                    Trabajo y estudio a la vez.
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="ocho" required>
+                                <label class="form-check-label" for="ocho" name="ocho">
+                                    Desactualización (hace años que dejé de estudiar).
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="nueve" required>
+                                <label class="form-check-label" for="nueve" name="nueve">
+                                    Tengo una enfermedad crítica o que requiere tratamiento.
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="diez" required>
+                                <label class="form-check-label" for="diez" name="diez">
+                                    Problemas personales.
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="once" required>
+                                <label class="form-check-label" for="once" name="once">
+                                    Problemas familiares.
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="doce" required>
+                                <label class="form-check-label" for="doce" name="doce">
+                                    Problemas económicos.
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="trece" required>
+                                <label class="form-check-label" for="trece" name="trece">
+                                    Otro.
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block" id="submit_button">ENVIAR</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="text-left bg-light py-1 py-md-1 footer-text">
+        <div class="container">
+
+            <p class="mb-0">Ficha: Nº 01</p>
+            <p class="mb-0">Autor: Ing. Edir Gonzano Rojas</p>
+            <p class="mb-0">Revisado por: Dr. Emiliano Huayre Ignacio</p>
+            
+        </div>
+    </footer>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ac95c313b7.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
